@@ -8,7 +8,7 @@ provider:
     env:
       - name: USE_CLOUD_API
         value: "true"
-      - name: HETZNER_API_TOKEN
+      - name: HETZNER_API_KEY
         valueFrom:
           secretKeyRef:
             name: hetzner-credentials
