@@ -18,7 +18,7 @@ spec:
         valueFiles:
           - $values/apps/infra/external-dns/values.yaml
 
-    - repoURL: https://github.com/Yornik/sharks-home-lab.git 
+    - repoURL: https://github.com/Yornik/sharks-home-lab/ 
       targetRevision: main
       ref: values
 
