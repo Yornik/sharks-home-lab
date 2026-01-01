@@ -4,6 +4,7 @@ metadata:
   name: guestbook-ui
   namespace: tools
   annotations:
+    external-dns.alpha.kubernetes.io/hostname: gast.fedishark.eu
     omni-kube-service-exposer.sidero.dev/port: "80"
     omni-kube-service-exposer.sidero.dev/label: Sample guestbook
 spec:
