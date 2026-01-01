@@ -1,0 +1,32 @@
+# external-dns/values.yaml
+provider:
+  name: webhook
+  webhook:
+    image:
+      repository: ghcr.io/mconfalonieri/external-dns-hetzner-webhook
+      tag: v0.9.0
+    env:
+      - name: USE_CLOUD_API
+        value: "true"
+      - name: HETZNER_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: hetzner-credentials
+            key: api-token
+    livenessProbe:
+      httpGet:
+        path: /health
+        port: http-webhook
+    readinessProbe:
+      httpGet:
+        path: /ready
+        port: http-webhook
+
+sources:
+  - service
+  - ingress
+
+policy: sync
+
+extraArgs:
+  - "--txt-prefix=reg-%{record_type}-"
