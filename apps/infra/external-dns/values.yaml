@@ -17,10 +17,14 @@ provider:
       httpGet:
         path: /health
         port: http-webhook
+      initialDelaySeconds: 10
+      timeoutSeconds: 5
     readinessProbe:
       httpGet:
         path: /ready
         port: http-webhook
+      initialDelaySeconds: 10
+      timeoutSeconds: 5
 
 sources:
   - service
