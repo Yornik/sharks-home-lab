@@ -11,14 +11,14 @@ spec:
     namespace: infra
 
   sources:
-    - repoURL: https://kubernetes-sigs.github.io/external-dns/
+    - repoURL: https://kubernetes-sigs.github.io/external-dns
       chart: external-dns
       targetRevision: 1.19.0
       helm:
         valueFiles:
           - $values/apps/infra/external-dns/values.yaml
 
-    - repoURL: https://github.com/Yornik/sharks-home-lab/ 
+    - repoURL: https://github.com/Yornik/sharks-home-lab 
       targetRevision: main
       ref: values
 
