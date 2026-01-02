@@ -5,6 +5,7 @@ metadata:
   namespace: tools
   annotations:
     external-dns.alpha.kubernetes.io/hostname: gast.fedishark.eu
+    external-dns.alpha.kubernetes.io/target: 1.1.1.1
     omni-kube-service-exposer.sidero.dev/port: "80"
     omni-kube-service-exposer.sidero.dev/label: Sample guestbook
 spec:
