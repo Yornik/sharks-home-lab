@@ -4,7 +4,7 @@ provider:
   webhook:
     image:
       repository: ghcr.io/mconfalonieri/external-dns-hetzner-webhook
-      tag: v0.9.0
+      tag: v0.10.0
     env:
       - name: USE_CLOUD_API
         value: "true"
